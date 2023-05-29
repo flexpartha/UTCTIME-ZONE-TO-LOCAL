@@ -84,7 +84,7 @@ export class MoviesComponent {
     var timestamp = new Date().getTime();
     this.utcTimeZone =  momentTimeZone.tz(timestamp, evt.target.value).format("DD/MM/YYYY hh:mm:ss A");
     //this.localeTimezone = moment.tz(this.utcTimeZone).local().format("DD/MM/YYYY hh:mm A");
-    this.localeTimezone = momentTimeZone.utc(timestamp).tz(evt.target.value).local().format("DD hh:mm:ss A");
+    this.localeTimezone = momentTimeZone.utc(timestamp).tz(evt.target.value).local().format("DD/MM/YYYY hh:mm:ss A");
     console.log("LOCAL-TIME-ZONE:::--",this.localeTimezone);
   }
 
