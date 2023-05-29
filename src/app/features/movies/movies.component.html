@@ -1,0 +1,32 @@
+<div>
+  <h4 style="color: #fff;">Current Date</h4><span style="color: #fff;">{{currentDate}}</span>
+</div>
+<br/>
+<div>
+  <h4 style="color: #fff;">UTC TIME ZONE FORMATING</h4><span style="color: #fff;">{{utcTimeZone}}</span>
+</div>
+<br/>
+<br/>
+<div [formGroup]="selectFormGrp">
+  <select formControlName = "selectZone" (change)="selectedZones($event)">
+    <option  selected disabled value="">Select--</option>
+    <option *ngFor="let zones of timeZones" [value]="zones.zoneName">
+      {{zones.zoneName}}
+    </option>
+  </select>
+</div>
+<br/>
+<br/>
+<div [formGroup]="selectFormGrp">
+  <select formControlName = "selectZone" (change)="selectedZonesById($event)">
+    <option  selected disabled value="">Select--</option>
+    <option *ngFor="let zones of timeZones" [value]="zones.zoneId">
+      {{zones.zoneName}}
+    </option>
+  </select>
+</div>
+<br/>
+<br/>
+<div class="grid grid-cols-4 grid-rows-2 gap-5">
+  <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+</div>
