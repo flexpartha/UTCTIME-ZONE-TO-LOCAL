@@ -80,6 +80,7 @@ export class MoviesComponent {
     })
   }
   selectedZones(evt:any){
+    
     console.log("Selected Zoned",evt.target.value);
     var timestamp = new Date().getTime();
     this.utcTimeZone =  momentTimeZone.tz(timestamp, evt.target.value).format("DD/MM/YYYY hh:mm:ss A");
