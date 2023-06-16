@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
 import {NgFor} from "@angular/common";
 
 import {Movie} from "../movie.model";
@@ -11,6 +11,18 @@ import {Movie} from "../movie.model";
     NgFor
   ]
 })
-export class MovieCardComponent {
+
+export class MovieCardComponent implements OnInit {
   @Input() movie: Movie | undefined;
+  
+  
+  //SINGLETON DESIGN PATTERN WITH CLASSES
+  // Config = {
+  //   start: () => console.log('App has started'),
+  //   update: () => console.log('App has updated'),
+  // }
+
+  ngOnInit(): void {
+
+  }
 }

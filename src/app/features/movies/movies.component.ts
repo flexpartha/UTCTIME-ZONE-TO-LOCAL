@@ -6,6 +6,7 @@ import {MovieCardComponent} from "./movie-card/movie-card.component";
 import * as moment from 'moment';
 import * as momentTimeZone from "moment-timezone";
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
