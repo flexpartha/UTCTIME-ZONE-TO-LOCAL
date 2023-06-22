@@ -67,7 +67,14 @@ export class MoviesComponent {
     var timeZoneEu = "Europe/Berlin";
     var timeZoneAEST = "Australia/Sydney";
     var americaDenver = 'America/Denver';
-    this.currentDate = moment(new Date()).format("MMM Do YY");
+    //how to set date for future based on current date
+    
+    //this.currentDate = moment(new Date().setDate(new Date().getDate() + 6)).format("MMM Do YY"); //time and date formate like  June 16th 23
+
+   // this.currentDate = moment(new Date()).format("Do MMM  YY"); //time and date formate like 16th June 23
+
+    this.currentDate = moment(new Date()).format("MMM Do YY"); //time and date formate like  June 16th 23
+
     this.utcTimeZone =  momentTimeZone.tz(this.timestamp, timeZoneAEST).format("DD/MM/YYYY hh:mm:ss A");
     //this.localeTimezone = moment.tz(this.utcTimeZone).local().format("DD/MM/YYYY hh:mm A");
     this.localeTimezone = momentTimeZone.utc(this.timestamp).tz(timeZoneAEST).local().format("DD/MM/YYYY hh:mm:ss A");
